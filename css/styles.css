@@ -1,0 +1,146 @@
+/* base styles */
+:root {
+    --orange-color: #FC7613;
+    --text-color-1: #989fa9;
+    --text-color-2: #ffffff;
+    --medium-grey: #242f37;
+    --dark-blue: #202731;
+    --very-dark-blue: #141519;
+}
+
+* {
+    margin: 0;
+	padding: 0;
+	-webkit-box-sizing: border-box;
+	-moz-box-sizing: border-box;
+	-o-box-sizing: border-box;
+	box-sizing: border-box;
+}
+
+body {
+	font: 15px "Overpass", sans-serif;
+    font-weight: 400;
+    background: var(--very-dark-blue);
+}
+
+h1, h2, h3, h4, h5, h6 {
+    font-weight: 700;
+}
+
+main {
+    margin: 120px auto;
+}
+
+/* helped classes */
+.hidden {
+    display: none;
+}
+
+
+/* Rating state start */
+.card__container {
+    max-width: 410px;
+    margin: auto;
+    background: var(--dark-blue);
+    padding: 32px;
+    border-radius: 16px;
+}
+
+.card__icon {
+    border-radius: 50%;
+    padding: 16px;
+    background: var(--medium-grey);
+    margin-bottom: 32px;
+}
+
+.card__heading {
+    font-size: 32px;
+    color: var(--text-color-2);
+    margin-bottom: 16px;
+}
+
+.card__text {
+    color: var(--text-color-1);
+    margin-bottom: 24px;
+}
+
+.card__rating {
+    list-style: none;
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 32px;
+}
+
+.card__rating li {
+    display: flex;
+    border-radius: 50%;
+    background: var(--medium-grey);
+    color: var(--text-color-1);
+    width: 48px;
+    height: 48px;align-items: center;
+    justify-content: center;
+    font-weight: 700;
+    cursor: pointer;
+    transition: all .5s ease-out;
+}
+
+.card__rating li:hover {
+    background: var(--text-color-1);
+    color: var(--text-color-2);
+    }
+
+.card__rating li:active {
+    background: var(--orange-color);
+    color: var(--text-color-2);
+
+}
+
+.card__btn {
+    background: var(--orange-color);
+    color: var(--text-color-2);
+    border-radius: 32px;
+    border: none;
+    width: 100%;
+    height: 48px;
+    padding: 16px;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    font-weight: 700;
+    cursor: pointer;
+    transition: all .5s ease-out;
+}
+
+.card__btn:hover {
+    background-color: var(--text-color-2);
+    color: var(--orange-color);
+}
+
+/* Thank you state start */
+.card__img {
+    display: block;
+    margin: auto;
+    margin-bottom: 32px;
+}
+
+.card__thank {
+    text-align: center;
+}
+
+.card__user-rating {
+    background: var(--medium-grey);
+    padding: 8px;
+    color: var(--orange-color);
+    border-radius: 32px;
+    font-weight: 400;
+    font-size: 16px;
+    width: 58%;
+    margin: auto;
+    margin-bottom: 32px;
+}
+
+.attribution {
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    color: var(--text-color-1);
+}

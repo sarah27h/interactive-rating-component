@@ -6,6 +6,9 @@
 
   <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
   <link rel="stylesheet" href="css/styles.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Overpass:wght@400;700&display=swap" rel="stylesheet">
   <title>Frontend Mentor | Interactive rating component</title>
 
   <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
@@ -18,7 +21,7 @@
   <main>
 
     <!-- Rating state start -->
-    <section class="card__wrapper">
+    <section class="card__container">
       <img src="./images/icon-star.svg" alt="rating star" class="card__icon">
       <h1 class="card__heading">
         How did we do?
@@ -38,7 +41,7 @@
     <!-- Rating state end -->
 
     <!-- Thank you state start -->
-    <section class="card__wrapper">
+    <section class="card__container card__thank hidden">
       <img src="./images/illustration-thank-you.svg" alt="" class="card__img">
       <h1 class="card__user-rating">
         You selected <!-- Add rating here --> out of 5

@@ -1,0 +1,333 @@
+/*
+	* Project Name : Build a Portfolio Site
+	* Version: 1
+	* Author Name: Sarah Hassan
+	* Date: 6/3/2018
+*/
+
+
+/* gerneral */
+* {
+	margin: 0;
+	padding: 0;
+	-webkit-box-sizing: border-box;
+	-moz-box-sizing: border-box;
+	-o-box-sizing: border-box;
+	box-sizing: border-box;
+}
+
+body {
+	font: 1em "Open Sans", sans-serif;
+}
+
+img,
+video {
+	max-width: 100%;
+}
+
+.container {
+	padding: 10px;
+}
+
+.text_center {
+	text-align: center;
+}
+
+.section_padding {
+	padding: 20px 0 10px;
+}
+
+.horizontal_line {
+	border-top: 1px solid #7d97ad;
+}
+
+.validation_icon {
+	border: 0;
+	width: 64px;
+	height: 20px;
+}
+
+
+/* start header */
+.main_header {
+	display: flex;
+    align-items: flex-start;
+	text-transform: uppercase;
+	padding: 10px 0 15px;
+}
+
+.logo_img {
+	width: 30%;
+}
+
+.developer_name {
+	width: 70%;
+	margin-left: auto;
+    text-align: right;
+}
+
+.developer_name h1 {
+	margin-top: 0;
+    font-weight: 100;
+    margin: 0;
+    line-height: 0.7em;
+    font-size: 1.7em;
+}
+
+.developer_name p {
+    margin-top: 5px;
+    font-weight: bold;
+}
+
+
+/* main header */
+.main img {
+	width: 100%;
+}
+
+
+/* start my works section */
+.my_works {
+	display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.my_works .section_header {
+	width: 100%;
+}
+
+.my_works h2 {
+	margin-right: auto;
+	color: #7d97ad;
+	font-weight: 400;
+	margin: 10px 0;
+}
+
+.project {
+	width: 100%;
+}
+
+.project .project_img {
+	max-width: 80%;
+	box-shadow: 3px 3px 20px #d4d4d4;
+}
+
+.project h4 {
+	margin: 0;
+    font-size: 1.25em;
+    font-weight: 400;
+}
+
+.project .project_link {
+	margin-top: 10px;
+    font-size: 2em;
+    padding: 5px 0 55px;
+    text-align: center;
+}
+
+.project .project_link a {
+	color: #30bfd8;
+    text-decoration: none;
+    -webkit-transition: color 0.5s;
+    transition: color 0.5s;
+	padding: 25px;
+	cursor: pointer;
+}
+
+.project .project_link a:hover {
+	color: #3c56ba;
+}
+
+
+/*
+ * Styles for info modal
+ */
+
+/* The Modal (background) */
+.modal {
+    display: none; /* Hidden by default */
+    position: fixed; /* Stay in place */
+    z-index: 1; /* Sit on top */
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgb(0,0,0);
+    background-color: rgba(0,0,0,0.4);
+}
+
+.modal .modal_content {
+	display: flex;
+    flex-wrap: wrap;
+    background-color: #fefefe;
+    margin: 15% auto;
+    padding: 30px;
+    border: 1px solid #888;
+    width: 80%;
+    color: #636363;
+}
+
+.modal .img_wrapper {
+	width: 100%;
+}
+
+.modal .img_wrapper img {
+	width: 100%;
+    margin: 0 auto;
+}
+
+.modal .text_wrapper {
+	width: 100%;
+	text-align: left;
+	font-size: 1.1em;
+}
+
+.modal .text_wrapper #modal_tech {
+	margin-top: 20px;
+	color: #da0303;
+	font-weight: bold;
+	text-transform: uppercase;
+}
+
+.modal .modal_close_btn {
+	width: 100%;
+	padding: 20px;
+    padding-top: 0;
+    color: #aaa;
+    text-align: right;
+    font-size: 28px;
+	font-weight: bold;
+	cursor: pointer;
+}
+
+.modal .modal_close_btn:hover,
+.modal .clomodal_close_btnse:focus {
+    color: black;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+.modal .modal_text {
+    font-size: 20px;
+    font-weight: bold;
+    color: #519a5b;
+}
+
+
+/* footer */
+.footer {
+	padding: 20px 10px;
+    background-color: #eaeaea;
+}
+
+.footer .social_icons {
+	margin-top: 15px;
+}
+
+.footer .social_icons a {
+	margin-top: 15px;
+    color: #38405f;
+	text-decoration: none;
+	-webkit-transition: color 0.5s;
+    transition: color 0.5s;
+}
+
+.footer .social_icons a:hover {
+	 color: #3c56ba;
+}
+
+.footer .social_icons .fab {
+	margin-right: 10px;
+    font-size: 3em;
+}
+
+
+/* media queries */
+/* for media screens */
+@media screen and (min-width: 499px) {
+	
+	.container {
+    	padding: 30px 20px;
+	}
+	
+	.developer_name h1 {
+		font-size: 2em;
+	}
+	
+	.project {
+    	width: 50%;
+	}
+	
+	.project:last-child {
+		margin-right: auto;
+	}
+	
+	.project:first-child {
+		margin-right: auto;
+	}
+	
+	.project .project_img {
+    	max-width: 90%;
+	}
+	
+}
+
+
+/* for large screens */
+@media screen and (min-width: 800px) {
+	
+	.container {
+    	width: 800px;
+    	padding: 30px;
+		margin-left: auto;
+		margin-right: auto; 
+	}
+	
+	.developer_name h1 {
+    	font-size: 3em;
+	}
+	
+	.developer_name p {
+    	font-weight: 500;
+	}
+	
+	.main {
+		margin: 0;
+	}
+	
+	.my_works h2 {
+    	font-size: 2em;
+	}
+	
+	.project {
+    	width: 33.33%;
+	}
+	
+	.project h4 {
+		font-size: 1.2em;
+	}
+
+	.modal .img_wrapper {
+		width: 45%;
+	}
+	
+	.modal .text_wrapper {
+		width: 49%;
+		margin-left: 33px;
+	}
+	
+}
+
+
+@media screen and (min-width: 1028px) {
+	
+	.container {
+    	width: 950px;
+    	padding: 30px;
+		margin-left: auto;
+		margin-right: auto; 
+	}
+	
+}
