@@ -24,7 +24,6 @@ cardRatingList.addEventListener('click', (e) => {
             if(item === e.target && !e.target.classList.contains('active')) {
                 e.target.classList.add('active');  
             }
-            console.log(item)
         })
         
 
