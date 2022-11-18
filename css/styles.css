@@ -27,8 +27,9 @@ h1, h2, h3, h4, h5, h6 {
     font-weight: 700;
 }
 
-main {
+.card__wrapper {
     margin: 120px auto;
+    padding: 0 16px;
 }
 
 /* helped classes */
@@ -87,9 +88,11 @@ main {
 .card__rating li:hover {
     background: var(--text-color-1);
     color: var(--text-color-2);
-    }
+}
 
-.card__rating li:active {
+/* It's not possible to modify pseudo-classes using JavaScript so you'll need to toggle an active class. */
+.card__rating li:active,
+.card__rating li.active {
     background: var(--orange-color);
     color: var(--text-color-2);
 
