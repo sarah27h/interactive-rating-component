@@ -31,14 +31,35 @@
       <p class="card__text">
         Please let us know how we did with your support request. All feedback is appreciated to help us improve our offering!
       </p>
-      <ul class="card__rating js-card__rating">
-        <li>1</li>
-        <li>2</li>
-        <li>3</li>
-        <li>4</li>
-        <li>5</li>
-      </ul>
-      <button class="card__btn js-card__btn">Submit</button>
+      <form class="form__rating js-form-rating">
+        <div class="form__fields-wrapper">
+          <label class="form__label sr-only" for="rate_1">
+            <input class="form__input js-form-radio" type="radio" name="rating" id="rate_1" value="1" >
+            <span>1</span>
+          </label>
+  
+          <label class="form__label sr-only" for="rate_2">
+            <input class="form__input js-form-radio" type="radio" name="rating" id="rate_2" value="2">
+            <span>2</span>
+          </label>
+  
+          <label class="form__label sr-only" for="rate_3">
+            <input class="form__input js-form-radio" type="radio" name="rating" id="rate_3" value="3">
+            <span>3</span>
+          </label>
+        
+          <label class="form__label sr-only" for="rate_4">
+            <input class="form__input js-form-radio" type="radio" name="rating" id="rate_4" value="4">
+            <span>4</span>
+          </label>
+  
+          <label class="form__label sr-only active" for="rate_5">
+            <input class="form__input js-form-radio" type="radio" name="rating" id="rate_5" value="5" checked="checked">
+            <span>5</span>
+          </label>
+        </div>
+        <button type="submit" class="card__btn js-card__btn">Submit</button>
+      </form>
     </section>
     <!-- Rating state end -->
 

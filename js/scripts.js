@@ -1,38 +1,36 @@
 // grab elements from DOM
-const cardRatingList = document.querySelector('.js-card__rating');
-const ratingListItems = document.querySelector('.js-card__rating').children;
-const cardBtn = document.querySelector('.js-card__btn');
 const cardContainer = document.querySelector('.js-card__container');
 const thankCard = document.querySelector('.js-card__thank');
+const ratingForm = document.querySelector('.js-form-rating');
+const cardBtn = document.querySelector('.js-card__btn');
+const selectedRate = document.querySelector(':checked');
+const ratingItems = document.querySelectorAll('.js-form-radio');
 const cardRatingValue = document.querySelector('.js-card__rating-value');
 
-let rateValueSelectedByUser = 0;
+// set the '5' rating as default rating
+let rateValueSelectedByUser = 5;
 
+ratingForm.addEventListener('change', (e) => {
 
-cardRatingList.addEventListener('click', (e) => {
-    if (e.target.nodeName.toLowerCase() == 'li') {
+    //  store selected rating value
+    rateValueSelectedByUser = Number(e.target.value);
+
+    Array.from(ratingItems).forEach((rateItem) => {
+        rateItem.removeAttribute('checked');
+        rateItem.parentNode.classList.remove('active');
+
+        if (e.target === rateItem) {
+            e.target.setAttribute('checked', 'checked');
+            e.target.parentNode.classList.add('active');
+        }
         
-        //  store selected rating value
-        rateValueSelectedByUser = Number(e.target.innerHTML);
-
-        Array.from(ratingListItems).forEach((item) => {
-            
-            // remove active from pervious clicked items
-            item.classList.remove('active');
-            
-            // check and add active class to clicked rating item
-            if(item === e.target && !e.target.classList.contains('active')) {
-                e.target.classList.add('active');  
-            }
-        })
-        
-
-    }
+    })
 })
 
 // add event listener to submit card btn
-cardBtn.addEventListener('click', (e) => {
+ratingForm.addEventListener('submit', (e) => {
+    e.preventDefault();
+    cardRatingValue.innerHTML = rateValueSelectedByUser;
     cardContainer.classList.add('hidden');
     thankCard.classList.remove('hidden');
-    cardRatingValue.innerHTML = rateValueSelectedByUser;
-})
+});
