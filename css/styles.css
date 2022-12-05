@@ -146,6 +146,15 @@ h1, h2, h3, h4, h5, h6 {
     border: 1px solid var(--orange-color);
 }
 
+.form__alert {
+    color: #fff;
+    margin-bottom: 8px;
+    padding: 8px;
+    /* background: #ff0000; */
+    /* width: 80%; */
+    margin-right: auto;
+}
+
 .card__rating li {
     display: flex;
     border-radius: 50%;
@@ -187,9 +196,14 @@ h1, h2, h3, h4, h5, h6 {
     transition: all .5s ease-out;
 }
 
-.card__btn:hover {
+
+.card__btn:hover:enabled {
     background-color: var(--text-color-2);
     color: var(--orange-color);
+}
+
+.card__btn:disabled {
+    cursor: not-allowed;
 }
 
 /* Thank you state start */

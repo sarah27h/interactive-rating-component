@@ -6,14 +6,20 @@ const cardBtn = document.querySelector('.js-card__btn');
 const selectedRate = document.querySelector(':checked');
 const ratingItems = document.querySelectorAll('.js-form-radio');
 const cardRatingValue = document.querySelector('.js-card__rating-value');
+const formAlter = document.querySelector('.form__alert');
+
 
 // set the '5' rating as default rating
-let rateValueSelectedByUser = 5;
+let rateValueSelectedByUser = 0;
 
 ratingForm.addEventListener('change', (e) => {
 
     //  store selected rating value
     rateValueSelectedByUser = Number(e.target.value);
+
+    // enable btn & hide alter massage
+    cardBtn.disabled = false;
+    formAlter.classList.add('hidden');
 
     Array.from(ratingItems).forEach((rateItem) => {
         rateItem.removeAttribute('checked');

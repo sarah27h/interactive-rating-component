@@ -53,12 +53,13 @@
             <span>4</span>
           </label>
   
-          <label class="form__label sr-only active" for="rate_5">
-            <input class="form__input js-form-radio" type="radio" name="rating" id="rate_5" value="5" checked="checked">
+          <label class="form__label sr-only" for="rate_5">
+            <input class="form__input js-form-radio" type="radio" name="rating" id="rate_5" value="5">
             <span>5</span>
           </label>
         </div>
-        <button type="submit" class="card__btn js-card__btn">Submit</button>
+        <p class="form__alert">Please, choose a rate to submit!</p>
+        <button type="submit" class="card__btn js-card__btn" disabled>Submit</button>
       </form>
     </section>
     <!-- Rating state end -->
